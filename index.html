@@ -1,36 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GIT 1</title>
 </head>
+
 <body>
     pruebo enviar al repositorio 1
     <p>parrafo 1</p>
     <div>capita para la posteridad</div><br>
-    <div>vamos a hacer un cambio importante que tiene que ser aprobado.</div>
+    <div id="numAzar">vamos a hacer un cambio importante que tiene que ser aprobado.</div>
 
-<br>
-<button onclick="verAlert()">enviar</button>
-    
+    <br>
+    <button onclick="verAlert()">enviar</button>
+
     <script>
         function repeat(n, action) {
-            for ( let i = 1; i <= n ; i++){
+            for (let i = 1; i <= n; i++) {
                 action(i)
             }
         }
-    
-    repeat(3, i => alert("esta modificación es la número " + i));
 
-    let numeros = [];
-    repeat(15, i => {
-        numeros.push(parseInt(Math.random() * (300/i - i**2))) ;
-        console.log(numeros);
-    })
+        function verAlert(){
+            alert("actuando desde el botón");
+        }
 
+
+        repeat(3, i => alert("esta repetición es la número " + i));
+
+        let numeros = [];
+        repeat(15, i => {
+            numeros.push(parseInt(Math.random() * (300 / i + i ** 2)));
+            console.log(numeros);
+        })
+        document.getElementById("numAzar").innerHTML = "Números al azar: " + numeros.join(" ::: ");
     </script>
-        
+
 </body>
+
 </html>
