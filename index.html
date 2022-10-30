@@ -16,9 +16,14 @@
 <button onclick="verAlert()">enviar</button>
     
     <script>
-    function verAlert() {
-        alert("esta modificación se realizó en GitHub");
-    }
+        function repeat(n, action) {
+            for ( let i = 1; i <= n ; i++){
+                action(i)
+            }
+        }
+    
+    repeat(5, i => alert("esta modificación es la número " + i));
+
     </script>
         
 </body>
