@@ -18,16 +18,17 @@
     <button onclick="verAlert()">enviar</button>
 
     <script>
+
+        function verAlert() {
+            alert("actuando desde el botón");
+        }
+
+        //Abstracting repetition
         function repeat(n, action) {
             for (let i = 1; i <= n; i++) {
                 action(i)
             }
         }
-
-        function verAlert(){
-            alert("actuando desde el botón");
-        }
-
 
         repeat(3, i => alert("esta repetición es la número " + i));
 
@@ -37,6 +38,23 @@
             console.log(numeros);
         })
         document.getElementById("numAzar").innerHTML = "Números al azar: " + numeros.join(" ::: ");
+
+
+        // Higher-order functions. Functions that create new functions.
+        function greaterThan(n) {
+            return m => m > n;
+        }
+        let mayorQueDiez = greaterThan(10);
+        console.log(mayorQueDiez(15));
+        // → true
+
+
+        function sumar(n) {
+            return m => m + n;
+        }
+
+        let sumaDos = sumar(2);
+        console.log(sumaDos(58));
     </script>
 
 </body>
