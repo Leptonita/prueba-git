@@ -22,7 +22,13 @@
             }
         }
     
-    repeat(5, i => alert("esta modificación es la número " + i));
+    repeat(3, i => alert("esta modificación es la número " + i));
+
+    let numeros = [];
+    repeat(15, i => {
+        numeros.push(parseInt(Math.random() * (300/i - i**2))) ;
+        console.log(numeros);
+    })
 
     </script>
         
