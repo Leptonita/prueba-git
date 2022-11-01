@@ -1,0 +1,48 @@
+/*palette #FF926E  #fcb #CCA395 #804937 #80665D */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    color: white;
+    margin: 0;
+}
+
+/* pantalla grande */
+.navigation {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+
+    text-align: center;
+    list-style: none;
+    margin: 0;
+    background-color: #CCA395;   
+}
+
+.navigation a {text-decoration: none; display: block; padding : 1em; color:white; }
+
+.navigation a:hover {background-color: #FCB; color:#80665D }
+
+/* pantalla mediana */
+@media all and (max-width: 800px) {
+    .navigation {
+        justify-content: space-around;
+    }
+}
+
+/* pantalla pequeña */
+@media all and (max-width: 600px) {
+    .navigation {
+        flex-flow: column wrap;
+        padding: 0;
+    }
+
+    .navigation a {
+        border-top: 1px solid wheat;
+        border-bottom: 1px solid #80665D;
+    }
+    .navigation li:last-of-type a {border-bottom: none;}
+
+}
